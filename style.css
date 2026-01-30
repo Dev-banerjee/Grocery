@@ -1,73 +1,73 @@
-/* Theme Colors */
 :root {
     --purple: #6a11cb;
     --blue: #2575fc;
-    --glass: rgba(255, 255, 255, 0.25);
+    --glass: rgba(255,255,255,0.18);
 }
 
 * {
     box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(135deg, var(--purple), var(--blue));
 }
 
-/* Hide radio buttons */
+/* hide radio buttons */
 input[type="radio"] {
     display: none;
 }
 
-/* Login box */
-.main-container {
-    width: 360px;
-    margin: 60px auto;
+/* main card */
+.container {
+    width: 380px;
     background: var(--glass);
-    backdrop-filter: blur(12px);
-    border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    backdrop-filter: blur(18px);
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
     overflow: hidden;
+    color: white;
 }
 
-/* Tabs */
-.buttons {
+/* tabs */
+.tabs {
     display: flex;
     position: relative;
     background: rgba(255,255,255,0.2);
 }
 
-.buttons label {
+.tabs label {
     width: 50%;
     padding: 15px;
     text-align: center;
     cursor: pointer;
     font-weight: 600;
-    color: white;
     z-index: 2;
 }
 
-/* Sliding indicator */
 .slider {
     position: absolute;
     width: 50%;
     height: 100%;
     background: linear-gradient(135deg, var(--purple), var(--blue));
+    border-radius: 12px;
     left: 0;
     top: 0;
-    border-radius: 10px;
     transition: 0.4s ease;
     z-index: 1;
 }
 
-#signup:checked ~ .buttons .slider {
+#signup:checked ~ .tabs .slider {
     left: 50%;
 }
 
-/* Sliding forms */
-.form-container {
+/* sliding forms */
+.form-wrapper {
     display: flex;
     width: 200%;
     transition: transform 0.4s ease;
@@ -75,62 +75,66 @@ input[type="radio"] {
 
 .form {
     width: 50%;
-    padding: 25px;
-    color: white;
+    padding: 30px;
 }
 
 .form h2 {
+    margin-bottom: 5px;
     text-align: center;
 }
 
-.form input {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    outline: none;
+.form p {
+    font-size: 14px;
+    opacity: 0.85;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.form button {
-    width: 100%;
-    background: linear-gradient(135deg, var(--purple), var(--blue));
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-#signup:checked ~ .form-container {
+#signup:checked ~ .form-wrapper {
     transform: translateX(-50%);
 }
 
-/* Product Section */
-.products {
-    text-align: center;
-    margin-top: 50px;
+/* inputs */
+.form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.25);
     color: white;
 }
 
-.product-cards {
+.form input::placeholder {
+    color: rgba(255,255,255,0.85);
+}
+
+/* options */
+.options {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 10px 0 20px;
 }
 
-.card {
-    background: white;
-    color: black;
-    padding: 15px 20px;
-    border-radius: 10px;
-    width: 160px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+.options a {
+    color: #a5f3fc;
+    text-decoration: none;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* buttons */
+.form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    opacity: 0.9;
 }
