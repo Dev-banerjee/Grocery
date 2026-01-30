@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <!-- Toggle buttons -->
+    <input type="radio" name="tab" id="login" checked>
+    <input type="radio" name="tab" id="signup">
+
+    <div class="buttons">
+        <label for="login">Login</label>
+        <label for="signup">Sign Up</label>
+        <div class="slider"></div>
+    </div>
+
+    <!-- Sliding forms -->
+    <div class="form-container">
+
+        <!-- Login -->
+        <form class="form login-form">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+        </form>
+
+        <!-- Signup -->
+        <form class="form signup-form">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Create Account</button>
+        </form>
+
+    </div>
+</div>
+
+<!-- Product Features -->
+<section class="products">
+    <h2>Popular Groceries</h2>
+
+    <div class="product-cards">
+        <div class="card">🍎 Fresh Fruits</div>
+        <div class="card">🥦 Vegetables</div>
+        <div class="card">🥛 Dairy Products</div>
+        <div class="card">🛒 Fast Delivery</div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6ff;
+}
+
+/* Main Login / Signup Box */
+.main-container {
+    width: 350px;
+    margin: 60px auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Toggle buttons */
+.buttons {
+    display: flex;
+    position: relative;
+}
+
+.buttons label {
+    width: 50%;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Sliding indicator */
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #28a745;
+    left: 0;
+    top: 0;
+    transition: 0.4s;
+    z-index: 0;
+}
+
+/* Move slider */
+#signup:checked ~ .buttons .slider {
+    left: 50%;
+}
+
+/* Forms */
+.form-container {
+    display: flex;
+    width: 200%;
+    transition: 0.4s;
+}
+
+.form {
+    width: 50%;
+    padding: 20px;
+}
+
+.form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.form button {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Slide forms */
+#signup:checked ~ .form-container {
+    transform: translateX(-50%);
+}
+
+/* Products Section */
+.products {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
