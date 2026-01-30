@@ -138,3 +138,48 @@ input[type="radio"] {
 .form button:hover {
     opacity: 0.9;
 }
+
+.navbar {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.page {
+    padding: 30px;
+    color: white;
+}
+
+.cards, .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card, .product {
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg,#3b82f6,#9333ea);
+    color: white;
+    cursor: pointer;
+}
